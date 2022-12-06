@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table table-striped text-centre">
+                <thead>
+                  <tr>
+                    <th scope="col">Course Title</th>
+                    <th scope="col">Course Description</th>
+                    <th scope="col">Course Venu</th>
+                    <th scope="col">Course Duration</th>
+                    <th scope="col">Course Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of course">
+                    
+                    <td>{{i.coursetitle}}</td>
+                    <td>{{i.coursedescription}}</td>
+                    <td>{{i.coursevenu}}</td>
+                    <td>{{i.duration}}</td>
+                    <td>{{i.date}}</td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

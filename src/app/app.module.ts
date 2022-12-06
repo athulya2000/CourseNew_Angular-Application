@@ -5,11 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ViewAllcourseComponent } from './view-allcourse/view-allcourse.component';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 const myRoute:Routes=[
   {
     path:"",
     component:AddCourseComponent
+  },
+  {
+    path:"view",
+    component:ViewAllcourseComponent
   }
 ]
 
@@ -17,12 +24,15 @@ const myRoute:Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    ViewAllcourseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
