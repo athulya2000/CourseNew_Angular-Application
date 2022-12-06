@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-add-course',
@@ -7,15 +8,32 @@ import { Component } from '@angular/core';
 })
 export class AddCourseComponent {
  
-coursetitle=""
-coursedescription=""
-coursevenue=""
-courseduration=""
-coursedate=""
+  coursetitle=""
+  coursedescription=""
+  coursevenu=""
+  duration=""
+  date=""
+ 
+constructor(private api:ApiService){}
 
 readValues=()=>{
-  let course:any={"coursetitle":this.coursetitle,"coursedescription":this.coursedescription,"coursevenue":this.coursevenue,"courseduration":this.courseduration,"coursedate":this.coursedate}
+  let course:any={"coursetitle":this.coursetitle,"coursedescription":this.coursedescription,"coursevenu":this.coursevenu,"duration":this.duration,"date":this.date}
   console.log(course)
+  this.api.addCourse(course).subscribe(
+    (response:any)=>{
+      console.log(response)
+      if (response.status=="course added successfully") {
+        alert("course added successfully")
+        this.coursetitle=""
+        this.coursedescription=""
+        this.coursevenu=""
+        this.duration=""
+        this.date=""
+      } else {
+        alert("something went wrong")
+      }
+    }
+  )
 }
 
 }
