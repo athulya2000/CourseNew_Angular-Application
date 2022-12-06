@@ -1,3 +1,4 @@
+<app-nav-bar></app-nav-bar>
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -8,19 +9,19 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Course Description </label>
-                    <textarea name="coursedescription" [(ngModel)]="coursedescription" id="" cols="30" rows="10" class="form-teatarea"></textarea>
+                    <textarea name="coursedescription" [(ngModel)]="coursedescription" id="" cols="30" rows="10" class="form-control"></textarea>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Course Venu</label>
-                    <input name="coursevenue" [(ngModel)]="coursevenue" type="text" class="form-control">
+                    <input name="coursevenu" [(ngModel)]="coursevenu" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Course Duration</label>
-                    <input name="courseduration" [(ngModel)]="courseduration" type="text" class="form-control">
+                    <input name="duration" [(ngModel)]="duration" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Course Date</label>
-                    <input type="date" name="coursedate" [(ngModel)]="coursedate" id="" class="form-control">
+                    <input type="date" name="coursedate" [(ngModel)]="date" id="" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <button (click)="readValues()" class="btn btn-warning">Submit</button>
