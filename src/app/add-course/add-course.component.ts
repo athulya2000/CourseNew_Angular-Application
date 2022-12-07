@@ -22,7 +22,7 @@ readValues=()=>{
   this.api.addCourse(course).subscribe(
     (response:any)=>{
       console.log(response)
-      if (response.status=="course added successfully") {
+      if (response.status="success") {
         alert("course added successfully")
         this.coursetitle=""
         this.coursedescription=""
